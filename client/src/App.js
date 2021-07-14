@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './components';
 import { Switch, Route } from 'react-router-dom';
-import { Cart, Home } from './pages';
+import { Cart, Home, NotFound } from './pages';
 
 const App = () => {
     return (
@@ -11,6 +11,7 @@ const App = () => {
                 <Switch>
                     <Route path='/' exact component={Home} />
                     <Route path='/cart' component={Cart} />
+                    <Route path='*' component={NotFound} />
                 </Switch>
             </div>
         </>
